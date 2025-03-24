@@ -74,8 +74,12 @@ where all the pages with dot are now statically generated automatically.
 
 
 SSR : Server Side Rendering 
+
 CSR : Client side Rendering  
+
 SSG : Static site generation
+
+
 
 in client side generation , it is also rendered server side , but the component which need to be render on client are only render on the client side  
 
