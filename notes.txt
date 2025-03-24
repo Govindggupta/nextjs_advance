@@ -27,3 +27,43 @@ and if you make it [[...slug]]
 then it would render for /courseId as well , so we don't need to make another page.tsx for /courseId 
 
 but better approach is to make another page.tsx 
+
+
+#Static Site Generation : 
+In this we generate some page into html which does need server side render and can be deliverd by static page directly . 
+in this When we build the project , Nextjs automatically genrate the static pages
+static page generate : making them into html page and directly deliverd when required 
+
+
+this is what is looks when we build the project and get as an output : 
+
+Acer@LAPTOP-JEN39SDR MINGW64 /d/WEB DEV/Nextjs/nextjs_advance (main)
+$ pnpm build 
+
+> nextjs_advance@0.1.0 build D:\WEB DEV\Nextjs\nextjs_advance
+> next build
+
+   ▲ Next.js 15.2.3
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+ ✓ Linting and checking validity of types    
+ ✓ Collecting page data    
+ ✓ Generating static pages (7/7)
+ ✓ Collecting build traces    
+ ✓ Finalizing page optimization
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      150 B         101 kB
+├ ○ /_not-found                            977 B         101 kB
+├ ƒ /blog/[blogId]                         150 B         101 kB
+├ ƒ /courses/[...folderIds]                150 B         101 kB
+├ ○ /signin                                150 B         101 kB
+└ ○ /signup                                150 B         101 kB
++ First Load JS shared by all             101 kB
+  ├ chunks/4bd1b696-5b6c0ccbd3c0c9ab.js  53.2 kB
+  ├ chunks/684-c0c78eab0c9b2e63.js       45.3 kB
+  └ other shared chunks (total)          1.95 kB
+
+where all the pages with dot are now statically generated automatically.
+
