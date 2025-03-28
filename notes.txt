@@ -86,3 +86,6 @@ in client side generation , it is also rendered server side , but the component 
 ![alt text](image.png)
 
 please refer this link for the more clearity : [Server and client side rendering](https://nextjs.org/learn/react-foundations/server-and-client-components)
+
+
+In CSR : it is client side component and server side rendered , then all component which are client side component are sent in a js file 
